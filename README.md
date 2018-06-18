@@ -11,7 +11,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   notify:
-    github: woodruffw/notify
+    github: woodruffw/notify.cr
 ```
 
 ## Usage
