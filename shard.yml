@@ -1,0 +1,13 @@
+name: notify
+version: 0.1.0
+
+authors:
+  - William Woodruff <william@yossarian.net>
+
+dependencies:
+  dbus:
+    github: oprypin/crystal-dbus
+
+crystal: 0.25.0
+
+license: MIT
