@@ -4,6 +4,10 @@ A Crystal library for
 [Desktop Notifications](http://www.galago-project.org/specs/notification/0.9/index.html) compatible
 notification daemons. Uses DBus internally.
 
+**Important**: Platforms with notification systems that don't use DBus/Desktop Notifications are
+currently **not supported**. If you'd like support for one of these platforms (e.g., macOS and
+Windows), please contribute one!
+
 ## Installation
 
 Add this to your application's `shard.yml`:
