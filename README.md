@@ -1,5 +1,7 @@
 # notify
 
+[![Build Status](https://img.shields.io/github/workflow/status/woodruffw/notify.cr/CI/master)](https://github.com/woodruffw/notify.cr/actions?query=workflow%3ACI)
+
 A Crystal library for
 [Desktop Notifications](http://www.galago-project.org/specs/notification/0.9/index.html) compatible
 notification daemons. Uses DBus internally.
