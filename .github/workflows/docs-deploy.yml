@@ -22,7 +22,9 @@ jobs:
           sudo apt install -y crystal
 
       - name: docs
-        run: crystal doc
+        run: |
+          shards install
+          crystal doc
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3.5.6
