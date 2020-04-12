@@ -1,4 +1,5 @@
-# notify
+notify.cr
+=========
 
 [![Build Status](https://img.shields.io/github/workflow/status/woodruffw/notify.cr/CI/master)](https://github.com/woodruffw/notify.cr/actions?query=workflow%3ACI)
 
