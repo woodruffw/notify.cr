@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - CI
   pull_request:
   schedule:
     - cron: "0 12 * * *"
