@@ -4,22 +4,26 @@ on:
   push:
     branches:
       - master
+      - CI
   pull_request:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: "0 12 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: deps
-        run: |
-          curl -sL "https://keybase.io/crystal/pgp_keys.asc" | sudo apt-key add -
-          echo "deb https://dist.crystal-lang.org/apt crystal main" | sudo tee /etc/apt/sources.list.d/crystal.list
-          sudo apt-get update
-          sudo apt install -y crystal
+      - uses: actions/checkout@v4
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: latest
       - name: lint
         run: crystal tool format --check src/
-      - name: build
-        run: shards build --production
+      - name: install dependencies
+        run: |
+          sudo apt-get install libdbus-1-dev libnotify-dev
+          shards install
+      - name : build
+        run: crystal build src/notify.cr
+      # - name: Run specs
+      #   run: crystal spec
